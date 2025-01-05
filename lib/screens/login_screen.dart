@@ -201,8 +201,8 @@ class LoginScreen extends StatelessWidget {
           borderRadius: BorderRadius.circular(12),
         ),
       ),
-      icon: Image.asset(
-        'assets/google_logo.png',
+      icon: Image.network(
+        'https://w7.pngwing.com/pngs/882/225/png-transparent-google-logo-google-logo-google-search-icon-google-text-logo-business-thumbnail.png',
         height: 24,
       ),
       label: const Text('Continue with Google'),

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:yash_pratical/controllers/auth_controller.dart';
 import 'package:yash_pratical/models/todo_item.dart';
 import '../controllers/todo_controller.dart';
 import '../widgets/todo_item_widget.dart';
@@ -8,6 +9,7 @@ import '../widgets/todo_form_sheet.dart';
 
 class TodoListPage extends StatelessWidget {
   final TodoController todoController = Get.put(TodoController());
+  final AuthController authController = Get.put(AuthController());
 
   @override
   Widget build(BuildContext context) {
@@ -22,6 +24,11 @@ class TodoListPage extends StatelessWidget {
             fontWeight: FontWeight.bold,
           ),
         ),
+        actions: [
+          IconButton(onPressed: (){
+            authController.signOut();
+          }, icon: Icon(Icons.logout,color: Colors.white,))
+        ],
       ),
       body: Column(
         children: [
